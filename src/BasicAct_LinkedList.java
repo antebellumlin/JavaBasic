@@ -82,6 +82,18 @@ public class BasicAct_LinkedList {
 		return head;
 	}
 	
+	/**
+	 * fast slow pointer
+	 * For searching middle point
+	 * 
+	 * fast, slow = head, head
+	 * while fast and fast.next:
+	 *     fast = fast.next.next
+	 *     slow = slow.next
+	 * slow will located at the middle(odd length) or middle former(even length)
+	 * (to check the type of length: fast.next==null
+	 * it should start without a dummy head
+	 */
 	
 	
 
