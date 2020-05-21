@@ -16,12 +16,22 @@ public class BFS {
 	
 	 * 
 	public Node BFS(HashMap graph, Node start){
+	
+		第一步：创建queue并输入start point
 		Queue<Node> q = new LinkedList<>();
 		q.offer(stsrt);
+		
+		第二步：记录去过的点，防止走回头路陷入死循环
 		Set<Node> seen = new HashSet<>();
 		seen.put(start);
+		
+		第三步：开始循环指导queue为空
 		while (q.size()>0){
+		
+			第四步：遍历queue
 			Node tmp = q.poll();
+			
+			第五步：遍历当前点的相邻点
 			Node[] tmp01 = graph.get(tmp);
 			for (Node x:tmp01){
 				if !seen.contains(x){
